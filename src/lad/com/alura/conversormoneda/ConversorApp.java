@@ -10,7 +10,7 @@ public class ConversorApp {
         //Creamos la consulta
         ConsultaApi consulta = new ConsultaApi();
 
-        System.out.println("********************************\n\n");
+        System.out.println("********************************");
         System.out.println("Bienvenido al mejor conversor de monedas");
         System.out.println("Ingrese el valor a convertir:");
         double valor = lector.nextDouble();
