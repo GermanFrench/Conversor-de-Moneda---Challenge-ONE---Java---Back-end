@@ -28,7 +28,7 @@ public class ConsultaApi {
         try {
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
-            // Convertimos JSON -> Objeto Java
+            // Convertimos JSON -> Objeto Java y capturamos los datos en el Record
             return new Gson().fromJson(response.body(), RespuestaApi.class);
 
         } catch (IOException | InterruptedException e) {

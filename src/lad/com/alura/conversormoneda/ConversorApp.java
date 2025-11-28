@@ -5,7 +5,9 @@ import java.util.Scanner;
 public class ConversorApp {
     public static void main(String[] args) {
 
+        //Creamos el Scanner
         Scanner lector = new Scanner(System.in);
+        //Creamos la consulta
         ConsultaApi consulta = new ConsultaApi();
 
         System.out.println("********************************\n\n");
@@ -34,13 +36,14 @@ public class ConversorApp {
 
         // Calculamos el monto convertido
         if (respuesta != null) {
-            double tasa = respuesta.conversion_rate(); // 👈 CAMBIO
+            double tasa = respuesta.conversion_rate();
             double convertido = valor * tasa;
 
             System.out.println("\nTasa: " + tasa);
             System.out.println("Resultado: " + convertido + " " + destino);
         }
     }
+
 
     private static String convertirCodigo(int opcion) {
         return switch (opcion) {
